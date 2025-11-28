@@ -11,7 +11,12 @@ app.use(express.urlencoded({extended: true}))
 connectDB();
 
 app.get("/", (req,res) => {
-    res.json({msg : "i am gokul"})
+    res.json({
+        msg : "i am gokul",
+        title: "enter your data",
+        desc: "this site is made using mern stack use this input strecture to use this url /movies"
+
+    })
 })
 
 app.use("/movies" , movieRoute)
